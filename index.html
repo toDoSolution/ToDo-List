@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TodoList</title>
+    <!-- CSS of the project-->
+    <link rel="stylesheet" href="styles.css">
+    <!-- Links an external CSS file (in this case, styles.css) to the HTML document. -->
+    <!-- Responsible for creating the page design-->
+
+    <!-- Font Awesome-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <!-- JS of the project-->
+    <script src="index.js" defer></script>
+    <!-- Inserts an external JavaScript file (in this case, scripts.js) into the HTML document, that is used to add interactivity to the page, such as responding to events (clicks, mouse movement, etc.) or modifying the page content dynamically.-->
+
+</head>
+
+<header>
+    <h1 class="title">To do list:</h1> <!-- Adicionada a classe 'title' -->
+</header>
+
+<body>
+    <!-- Container para todo-container que engloba todos os elementos -->
+    <div class="todo-container">
+        <!-- create the box to add the task -->
+        <form id="todo-form">
+            <p> Add your task:</p>
+            <div class="form-control">
+                <input type="text" id="todo-input" placeholder="What is your task?" />
+                <select id="subject-select">
+                    <option value="Biology">Biology</option>
+                    <option value="Business">Business</option>
+                    <option value="Chemistry">Chemistry</option>
+                    <option value="C.S.">Computer Science</option>
+                    <option value="Desig">Design</option>
+                    <option value="Drama">Drama</option>
+                    <option value="Dutch">Dutch</option>
+                    <option value="Economics">Economics</option>
+                    <option value="English">English</option>
+                    <option value="E.S.S">E.S.S.</option>
+                    <option value="E.E.">Extended Essay</option>
+                    <option value="French">French</option>
+                    <option value="German">German</option>
+                    <option value="Geography">Geography</option>
+                    <option value="History">History</option>
+                    <option value="Maths">Mathematics</option>
+                    <option value="Music">Music</option>
+                    <option value="Personal">Personal Appointments</option>
+                    <option value="Psy">Psychology</option>
+                    <option value="Phys">Physics</option>
+                    <option value="P.E.">Physical Education</option>
+                    <option value="Self-taught">Self-taught</option>
+                    <option value="Spanish">Spanish</option>
+                    <option value="T.O.K.">TOK</option>
+                    <option value="Visual Arts">Visual Arts</option>
+                </select>
+                <label>
+                    <input type="checkbox" id="high-priority" /> High Priority
+                </label>
+                <button type="submit" >
+                    <i class="fa-thin fa-plus"></i>
+                </button>
+            </div>
+        </form>
+
+        <form id="edit-form" class="hide">
+            <p> Edit your task:</p>
+            <div class="form-control">
+                <input type="text" id="edit-input">
+                <button type="submit">
+                    <i class="fa-solid fa-check-double"></i>
+                </button>
+            </div>
+            <button id="cancel-edit-btn"> Cancel </button>
+        </form>
+
+        <div id="toolbar">
+            <div id="search">
+                <h4>Search:</h4>
+                <form>
+                    <input type="text" id="search-input" placeholder="Search">
+                </form>
+            </div>
+            <div id="filter">
+                <h4>Filter:</h4>
+                <select id="filter-select">
+                    <option value="all">All</option>
+                    <option value="Biology">Biology</option>
+                    <option value="Business">Business</option>
+                    <option value="Chemistry">Chemistry</option>
+                    <option value="C.S.">Computer Science</option>
+                    <option value="Desig">Design</option>
+                    <option value="Drama">Drama</option>
+                    <option value="Dutch">Dutch</option>
+                    <option value="Economics">Economics</option>
+                    <option value="English">English</option>
+                    <option value="E.S.S">E.S.S.</option>
+                    <option value="E.E.">Extended Essay</option>
+                    <option value="French">French</option>
+                    <option value="German">German</option>
+                    <option value="Geography">Geography</option>
+                    <option value="History">History</option>
+                    <option value="Maths">Mathematics</option>
+                    <option value="Music">Music</option>
+                    <option value="Personal">Personal Appointments</option>
+                    <option value="Psy">Psychology</option>
+                    <option value="Phys">Physics</option>
+                    <option value="P.E.">Physical Education</option>
+                    <option value="Self-taught">Self-taught</option>
+                    <option value="Spanish">Spanish</option>
+                    <option value="T.O.K.">TOK</option>
+                    <option value="Visual Arts">Visual Arts</option>
+                </select>
+            </div>
+        </div>
+
+        <div id="list">
+            <h4> List: </h4>
+        </div>
+
+        <div class="todo-list-container">
+            <div id="todo-list">
+                <!-- As tarefas serão adicionadas aqui -->
+            </div>
+        </div>
+    </div> <!-- Fim do todo-container -->
+
+</body>
+</html>
